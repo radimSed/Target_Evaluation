@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary report from Target Evaluation</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="content">
+      <h1>Summary report from Target Evaluation</h1>
+      <div class="container">
+        <div class="logo-container">
+          <img src="./logo.svg" alt="logo" class="logo" />
+        </div>
+      </div>
+
+      <p><strong>File name:</strong>+filename+</p>
+      <div class="parameters1">
+        <div class="place-conditions">
+          <table>
+            <tr>
+              <th colspan="2">Place and conditions</th>
+            </tr>
+            <tr>
+              <th class="header-width">Place</th>
+              <td>+place+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Date</th>
+              <td>+date+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Time</th>
+              <td>+time+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Position</th>
+              <td>+position+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Distance [m]</th>
+              <td>+distance+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Target number</th>
+              <td>+targetNmbr+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Angle [°]</th>
+              <td>+angle+</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Light direction</th>
+            </tr>
+            <tr>
+              <td>
+                <div class="img-container">
+                  <img src="./lightDir.png" alt="Light direction" />
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="weather">
+          <table>
+            <tr>
+              <th colspan="2">Weather conditions</th>
+            </tr>
+            <tr>
+              <th class="header-width">Air temperature [˚C]</th>
+              <td>+temp+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Air pressure [hPa]</th>
+              <td>+press+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Humidity [%]</th>
+              <td>+humi+</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th colspan="2">Mirage classification</th>
+            </tr>
+            <tr>
+              <th class="header-width">Category</th>
+              <td>+category+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Classification</th>
+              <td>+classification+</td>
+            </tr>
+            <th class="header-width">Estimated crosswind [m/s]</th>
+            <td>+escrosswind+</td>
+          </table>
+          <table>
+            <tr>
+              <th colspan="2">Wind direction and speed</th>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="img-container">
+                  <img src="./windDir.png" alt="Wind direction" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="header-width">Speed [m/s]</th>
+              <td>+windspeed+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Crosswind [m/s]</th>
+              <td>+crosswind+</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="parameters2">
+        <div class="rifle">
+          <table>
+            <tr>
+              <th colspan="2">Rifle data</th>
+            </tr>
+            <tr>
+              <th class="header-width">Rifle assembly</th>
+              <td>+assembly+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Caliber [mm]</th>
+              <td>+cal+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Ammunition</th>
+              <td>+ammo+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Batch</th>
+              <td>+batch+</td>
+            </tr>
+            <tr>
+              <th class="header-width">V<sub>0</sub> [m/s]</th>
+              <td>+v0+</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th colspan="2">Scope settings</th>
+            </tr>
+            <tr>
+              <th class="header-width">Elevation [clicks]</th>
+              <td>+elev+</td>
+            </tr>
+            <tr>
+              <th class="header-width">Windage [clicks]</th>
+              <td>+windageval+ +windagedir+</td>
+            </tr>
+          </table>
+        </div>
+        <div class="notes">
+          <h2>Other notes</h2>
+          +notes+
+        </div>
+      </div>
+
+      <div class="property-container">
+        <h2>Results</h2>
+        <div class="img-container">
+          <img
+            class="impacts-pic"
+            src="./impactsPic.png"
+            alt="Impacts picture"
+          />
+        </div>
+        <table id="results">
+          <tr>
+            <th class="first-column"></th>
+            <th>X [mm]</th>
+            <th>Y [mm]</th>
+            <th>D [mm](MOA)</th>
+          </tr>
+          <tr>
+            <th class="first-column">2R100 circle</th>
+            <td>+2r100x+</td>
+            <td>+2r100y+</td>
+            <td>+2r100d+ (+moa+)</td>
+          </tr>
+          <tr>
+            <th class="first-column">Middple point of impacts</th>
+            <td>+mpoix+</td>
+            <td>+mpoiy+</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
