@@ -147,8 +147,12 @@ public class TEImpactSet {
 	public String getMirageEstimatedCrosswind() {
 		return new TEMirageClassifier().getEstimatedCrosswind(mirageClassification);
 	}
-	public Double getCalculatedCrosswind() {
-		return new TEWindIndicator().getCalculatedCrosswind(Integer.parseInt(windDirection), Double.parseDouble(windSpeed));
+	public String getCalculatedCrosswind() {
+		if(windDirection.equals(NOTAPPLICABLE)){
+			return NOTAPPLICABLE;
+		} else {
+			return String.valueOf(new TEWindIndicator().getCalculatedCrosswind(Integer.parseInt(windDirection), Double.parseDouble(windSpeed)));
+		}
 	}
 	
 	

@@ -38,7 +38,8 @@ public class TEImpactSetsPanel extends JPanel{
 	private TEGui gui;
 
 	private final String DIR_EXTENSION = "_SUMMARY";
-	
+	private final String NOTAPPLICABLE = "Not Applicable";
+
 	public TEImpactSetsPanel(TEGui gui, TEGlobalVariables globVars) {
 		super();
 		this.gui = gui;
@@ -314,8 +315,13 @@ public class TEImpactSetsPanel extends JPanel{
 			sb.replace(startEnd[0], startEnd[1], "null");
 		}
 		
+		String crossWind = set.getCalculatedCrosswind();
 		startEnd = getStartEnd(sb, "+crosswind+");
-		sb.replace(startEnd[0], startEnd[1], String.valueOf(nf.format(set.getCalculatedCrosswind())));
+		if(crossWind.equals(NOTAPPLICABLE)){
+			sb.replace(startEnd[0], startEnd[1],crossWind);
+		} else {
+			sb.replace(startEnd[0], startEnd[1], String.valueOf(nf.format(crossWind)));
+		}
 		
 		startEnd = getStartEnd(sb, "+assembly+");
 		sb.replace(startEnd[0], startEnd[1], set.getRifleAssembly());
