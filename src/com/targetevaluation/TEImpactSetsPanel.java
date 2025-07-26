@@ -315,6 +315,7 @@ public class TEImpactSetsPanel extends JPanel{
 			sb.replace(startEnd[0], startEnd[1], "null");
 		}
 		
+		//Fixed issue with "Not Applicable" wind direction during report generation.
 		String crossWind = set.getCalculatedCrosswind();
 		startEnd = getStartEnd(sb, "+crosswind+");
 		if(crossWind.equals(NOTAPPLICABLE)){
@@ -322,7 +323,8 @@ public class TEImpactSetsPanel extends JPanel{
 		} else {
 			sb.replace(startEnd[0], startEnd[1], String.valueOf(nf.format(crossWind)));
 		}
-		
+		//end of fix
+
 		startEnd = getStartEnd(sb, "+assembly+");
 		sb.replace(startEnd[0], startEnd[1], set.getRifleAssembly());
 
