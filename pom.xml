@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>TargetEvaluation</groupId>
   <artifactId>TargetEvaluation</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
 
 	<properties>
 		<java.version>21</java.version>
@@ -29,7 +29,6 @@
     	<artifactId>commons-io</artifactId>
     	<version>2.19.0</version>
 	</dependency>
-
   </dependencies>
 
   <build>
@@ -44,10 +43,10 @@
     </resources>
 <!-- **************************************************************** -->    
     <plugins>
-          <plugin>
+         <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.6.0</version>
+        <version>3.7.1</version>
 
         <configuration>
           <descriptorRefs>
@@ -72,7 +71,15 @@
           </execution>
         </executions>
       </plugin>
-      
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>16</source>
+                <target>16</target>
+            </configuration>
+        </plugin>
+
     </plugins>
 <!-- **************************************************************** -->    
   </build>
